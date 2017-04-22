@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+}
+
+.page {
+	margin: 0 10px;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.25;
+	color: #262626;
+	overflow-x: hidden;
+}
+
+.page__items {
+    margin: 10px -15px;
+	text-align: center;
+}
+
+.item {
+	position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 300px;
+	border-radius: 3px;
+	margin: 30px 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.item__photo {
+    width: 100%;
+    height: 320px;
+    margin: 81px 0 0 0;
+}
+
+.photo {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+.item__content {
+	width: 326px;
+	padding: 0 25px;
+}
+
+.item__header {
+	position: absolute;
+    top: 0;
+    left: 0;
+	width: 100%;
+	height: 81px;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-bottom: 1px solid #efefef;
+    font-size: 14px;
+}
+
+.avatar__img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    height: 40px;
+	margin: 0 0 0 10px;
+}
+
+.info__username {
+    font-weight: 600;
+}
+
+.info__description {
+	font-size: 15px;
+    margin: 20px 0 0 0;
+}
+
+.header__created-time {
+    color: #999999;
+}
+
+.item__info {
+	padding: 15px 10px 25px 10px;
+}
+
+.info__likes {
+	display: flex;
+}
+
+.likes__icon {
+    width: 15px;
+    height: 15px;
+    background: url(heart-outline.svg) no-repeat;
+    background-size: cover;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.likes__count {
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.helper {
+	display: inline-flex;
+    width: 330px;
+    height: 0;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .item {
+        flex-direction: row;
+        width: 650px;
+    }
+
+    .item__photo {
+    	min-width: 320px;
+    	margin: 0;
+    }
+
+    .item__header {
+    	position: static;
+    	margin: 0 0 20px 0;
+    }
+
+    .item__info {
+	    width: 100%;
+    	padding: 0 25px;
+    }
+}
